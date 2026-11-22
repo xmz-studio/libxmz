@@ -28,68 +28,68 @@
 #include <ctime>
 
 namespace xmz {
-    namespace log {
+	namespace log {
 		namespace lv {
 			/* log level macros */
-			inline std::string  EMERG	= "[Emerg]:";
-			inline std::string  ALERT	= "[Alert]:";
-			inline std::string  CRIT	= "[Crit]:";
-			inline std::string  ERROR	= "[Error]:";
-			inline std::string  WARN	= "[Warn]:";
-			inline std::string  NOTICE	= "[Notice]:";
-			inline std::string  INFO	= "[Info]:";
-			inline std::string  DEBUG	= "[Debug]:";
-			inline std::string  KEEP	= "[Keep]:"; // no definition for the time being
+			inline constexpr std::string_view	EMERG	= "[Emerg]:";
+			inline constexpr std::string_view	ALERT	= "[Alert]:";
+			inline constexpr std::string_view	CRIT	= "[Crit]:";
+			inline constexpr std::string_view	ERROR	= "[Error]:";
+			inline constexpr std::string_view	WARN	= "[Warn]:";
+			inline constexpr std::string_view	NOTICE	= "[Notice]:";
+			inline constexpr std::string_view	INFO	= "[Info]:";
+			inline constexpr std::string_view	DEBUG	= "[Debug]:";
+			inline constexpr std::string_view	KEEP	= "[Keep]:"; // no definition for the time being
 
-			inline std::string emerg	= xmz::color::TRBWC + EMERG + xmz::color::NC;
-			inline std::string alert	= xmz::color::RBYC + ALERT + xmz::color::NC;
-			inline std::string crit		= xmz::color::RBWC + CRIT + xmz::color::NC;
-			inline std::string error	= xmz::color::RED + ERROR + xmz::color::NC;
-			inline std::string warn		= xmz::color::YELLOW + WARN + xmz::color::NC;
-			inline std::string notice	= xmz::color::CYAN + NOTICE + xmz::color::NC;
-			inline std::string info		= xmz::color::GREEN + INFO + xmz::color::NC;
-			inline std::string debug	= xmz::color::GRAY + DEBUG + xmz::color::NC;
-        } /* namespace lv */
-        inline std::string get_time() { return "[" + xmz::get_time_str() + "]:"; }
+			inline constexpr std::string_view	emerg	= xmz::color::TRBWC + EMERG + xmz::color::NC;
+			inline constexpr std::string_view	alert	= xmz::color::RBYC + ALERT + xmz::color::NC;
+			inline constexpr std::string_view	crit	= xmz::color::RBWC + CRIT + xmz::color::NC;
+			inline constexpr std::string_view	error	= xmz::color::RED + ERROR + xmz::color::NC;
+			inline constexpr std::string_view	warn	= xmz::color::YELLOW + WARN + xmz::color::NC;
+			inline constexpr std::string_view	notice	= xmz::color::CYAN + NOTICE + xmz::color::NC;
+			inline constexpr std::string_view	info	= xmz::color::GREEN + INFO + xmz::color::NC;
+			inline constexpr std::string_view	debug	= xmz::color::GRAY + DEBUG + xmz::color::NC;
+		} /* namespace lv */
+		inline std::string get_time() { return "[" + xmz::get_time_str() + "]:"; }
 
-        template<typename... Args>
-        inline void emerg(const Args&... args)
+		template<typename... Args>
+		inline void emerg(const Args&... args)
 		{ xmz::perrln(xmz::log::lv::emerg, get_time(), args...); }
 
-        template<typename... Args>
-        inline void alert(const Args&... args)
+		template<typename... Args>
+		inline void alert(const Args&... args)
 		{ xmz::perrln(xmz::log::lv::alert, get_time(), args...); }
 
-        template<typename... Args>
-        inline void crit(const Args&... args)
+		template<typename... Args>
+		inline void crit(const Args&... args)
 		{ xmz::perrln(xmz::log::lv::crit, get_time(), args...); }
 
 		template<typename... Args>
-        inline void error(const Args&... args)
+		inline void error(const Args&... args)
 		{ xmz::perrln(xmz::log::lv::error, get_time(), args...); }
 
 		template<typename... Args>
-        inline void warn(const Args&... args)
+		inline void warn(const Args&... args)
 		{ xmz::perrln(xmz::log::lv::warn, get_time(), args...); }
 
 		template<typename... Args>
-        inline void notice(const Args&... args)
+		inline void notice(const Args&... args)
 		{ xmz::perrln(xmz::log::lv::notice, get_time(), args...); }
 
 		template<typename... Args>
-        inline void info(const Args&... args)
+		inline void info(const Args&... args)
 		{ xmz::println(xmz::log::lv::info, get_time(), args...); }
 
 		template<typename... Args>
-        inline void debug(const Args&... args)
+		inline void debug(const Args&... args)
 		{ xmz::perrln(xmz::log::lv::debug, get_time(), args...); }
 
 		inline constexpr auto err = [](const std::string& msg) { error(msg); };
 
 		template<typename... Args>
-        inline void custom(const std::string& info_type, const Args&... args)
+		inline void custom(const std::string& info_type, const Args&... args)
 		{ xmz::println("[" + info_type + "]", args...); }
-    } /* namespace log */
+	} /* namespace log */
 }
 #endif /* LIBXMZ_LOG_HPP */
 
