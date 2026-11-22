@@ -23,15 +23,15 @@
 #include <string>
 
 namespace xmz::color {
-    inline constexpr std::string_view NC		= "\033[0m";
-    inline constexpr std::string_view RED		= "\033[0;31m";
-    inline constexpr std::string_view YELLOW	= "\033[0;33m";
-    inline constexpr std::string_view GREEN	= "\033[0;32m";
-    inline constexpr std::string_view GRAY		= "\033[0;90m";
-    inline constexpr std::string_view CYAN		= "\033[0;36m";
-    inline constexpr std::string_view TRBWC	= "\033[5;37;41m";  // white characters on a red background(Twinkle)
-    inline constexpr std::string_view RBYC		= "\033[1;33;41m";  // yellow characters on a red background
-    inline constexpr std::string_view RBWC		= "\033[1;37;41m";  // white characters on a red background
+    inline const std::string NC		= "\033[0m";
+    inline const std::string RED		= "\033[0;31m";
+    inline const std::string YELLOW	= "\033[0;33m";
+    inline const std::string GREEN	= "\033[0;32m";
+    inline const std::string GRAY		= "\033[0;90m";
+    inline const std::string CYAN		= "\033[0;36m";
+    inline const std::string TRBWC	= "\033[5;37;41m";  // white characters on a red background(Twinkle)
+    inline const std::string RBYC		= "\033[1;33;41m";  // yellow characters on a red background
+    inline const std::string RBWC		= "\033[1;37;41m";  // white characters on a red background
 } /* namespace xmz::color */
 #endif /* LIBXMZ_COLOR_HPP */
 

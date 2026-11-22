@@ -31,24 +31,24 @@ namespace xmz {
 	namespace log {
 		namespace lv {
 			/* log level macros */
-			inline constexpr std::string_view	EMERG	= "[Emerg]:";
-			inline constexpr std::string_view	ALERT	= "[Alert]:";
-			inline constexpr std::string_view	CRIT	= "[Crit]:";
-			inline constexpr std::string_view	ERROR	= "[Error]:";
-			inline constexpr std::string_view	WARN	= "[Warn]:";
-			inline constexpr std::string_view	NOTICE	= "[Notice]:";
-			inline constexpr std::string_view	INFO	= "[Info]:";
-			inline constexpr std::string_view	DEBUG	= "[Debug]:";
-			inline constexpr std::string_view	KEEP	= "[Keep]:"; // no definition for the time being
+			inline const std::string	EMERG	= "[Emerg]:";
+			inline const std::string	ALERT	= "[Alert]:";
+			inline const std::string	CRIT	= "[Crit]:";
+			inline const std::string	ERROR	= "[Error]:";
+			inline const std::string	WARN	= "[Warn]:";
+			inline const std::string	NOTICE	= "[Notice]:";
+			inline const std::string	INFO	= "[Info]:";
+			inline const std::string	DEBUG	= "[Debug]:";
+			inline const std::string	KEEP	= "[Keep]:"; // no definition for the time being
 
-			inline constexpr std::string_view	emerg	= xmz::color::TRBWC + EMERG + xmz::color::NC;
-			inline constexpr std::string_view	alert	= xmz::color::RBYC + ALERT + xmz::color::NC;
-			inline constexpr std::string_view	crit	= xmz::color::RBWC + CRIT + xmz::color::NC;
-			inline constexpr std::string_view	error	= xmz::color::RED + ERROR + xmz::color::NC;
-			inline constexpr std::string_view	warn	= xmz::color::YELLOW + WARN + xmz::color::NC;
-			inline constexpr std::string_view	notice	= xmz::color::CYAN + NOTICE + xmz::color::NC;
-			inline constexpr std::string_view	info	= xmz::color::GREEN + INFO + xmz::color::NC;
-			inline constexpr std::string_view	debug	= xmz::color::GRAY + DEBUG + xmz::color::NC;
+			inline const std::string	emerg	= xmz::color::TRBWC + EMERG + xmz::color::NC;
+			inline const std::string	alert	= xmz::color::RBYC + ALERT + xmz::color::NC;
+			inline const std::string	crit	= xmz::color::RBWC + CRIT + xmz::color::NC;
+			inline const std::string	error	= xmz::color::RED + ERROR + xmz::color::NC;
+			inline const std::string	warn	= xmz::color::YELLOW + WARN + xmz::color::NC;
+			inline const std::string	notice	= xmz::color::CYAN + NOTICE + xmz::color::NC;
+			inline const std::string	info	= xmz::color::GREEN + INFO + xmz::color::NC;
+			inline const std::string	debug	= xmz::color::GRAY + DEBUG + xmz::color::NC;
 		} /* namespace lv */
 		inline std::string get_time() { return "[" + xmz::get_time_str() + "]:"; }
 
