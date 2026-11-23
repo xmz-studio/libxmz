@@ -15,8 +15,8 @@ int main() {
 		xmz::println("file:", filename, "created failed");
 		return 1;
 	}
-	std::string readtext = xmz::fs::readfile_str(filename);
 	xmz::fs::writefile(writetext, filename);
+	std::string readtext = xmz::fs::readfile_str(filename);
 	if (readtext == writetext)
 		xmz::println("write successfully");
 	else {
