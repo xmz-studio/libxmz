@@ -55,20 +55,20 @@ namespace xmz {
 		inline bool writefile(const std::string& text, const std::string& file) {
 			std::ofstream outfile(file);
 			if (!outfile.is_open()) return false;
-			outfile << text << '\n';
+			outfile << text;
 			return true;
 		}
 		template<typename Container>
 		inline bool writefile(const Container& lines, const std::string& file) {
 			std::ofstream outfile(file);
 			if (!outfile.is_open()) return false;
-			for (const auto& line : lines) outfile << line << '\n';
+			for (const auto& line : lines) outfile << line;
 			return true;
 		}
 		inline bool writefile(std::initializer_list<std::string> lines, const std::string& file) {
 			std::ofstream outfile(file);
 			if (!outfile.is_open()) return false;
-			for (const auto& line : lines) outfile << line << '\n';
+			for (const auto& line : lines) outfile << line;
 			return true;
 		}
 		inline bool
@@ -167,7 +167,7 @@ namespace xmz {
 		{
 			std::ofstream outfile(file, std::ios::app);
 			if (!outfile.is_open()) return false;
-			outfile << text << '\n';
+			outfile << text;
 			return true;
 		}
 	} // namespace fs
