@@ -87,8 +87,8 @@ namespace xmz {
 		inline constexpr auto err = [](const std::string& msg) { error(msg); };
 
 		template<typename... Args>
-		inline void custom(const std::string& info_type, const Args&... args)
-		{ xmz::println("[" + info_type + "]", args...); }
+		inline void custom(const int fd, const std::string& tag, const Args&... args)
+		{ xmz::fprintln(fd, "[" + tag + "]", args...); }
 	} /* namespace log */
 }
 #endif /* LIBXMZ_LOG_HPP */

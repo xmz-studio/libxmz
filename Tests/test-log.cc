@@ -14,5 +14,7 @@ int main(int argc, char *argv[]) {
     xmz::log::crit("this is crit msg");
     xmz::log::alert("this is alert msg");
     xmz::log::notice("this is notice msg");
+	xmz::log::custom(xmz::stdout, "MY", "this is custom msg");
     return 0;
 }
+

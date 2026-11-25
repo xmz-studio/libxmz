@@ -54,6 +54,9 @@
 
 namespace xmz {
     namespace io {
+		inline constexpr int stdin  = 0;
+		inline constexpr int stdout = 1;
+		inline constexpr int stderr = 2;
 #if defined(LIBXMZ_IO_NO_AUTO_SPACE) && (LIBXMZ_IO_NO_AUTO_SPACE)
         inline constexpr bool no_auto_space = true;
 #else
