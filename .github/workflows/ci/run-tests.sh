@@ -23,6 +23,7 @@ TESTS=(
   test-runsh.cc
   test-io-no-auto-space.cc
   test-io-auto-space.cc
+  test-io2.cc
 )
 
 fail=0
